@@ -1,21 +1,30 @@
 {
-    "name": "immusen/yii2-swoole-mqtt",
-    "description": "MQTT server for Yii2 base on swoole 4, Resolve topic as a route reflect into controller/action/param, And support redis pub/sub to trigger async task from your web application",
-    "type": "yii2-extension",
-    "keywords": ["yii2","extension","swoole","mqtt","mqtt server","redis","IOT", "async", "pub sub"],
-    "license": "Apache-2.0",
-    "authors": [
-        {
-            "name": "immusen",
-            "email": "immusen@gmail.com"
-        }
-    ],
-    "require": {
-        "yiisoft/yii2": "~2.0.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "immusen\\mqtt\\": ""
-        }
+  "name": "immusen/yii2-swoole-websocket",
+  "description": "Websocket server for Yii2 base on swoole 4, Support JSONRPC, Resolve 'method' as a route reflect into controller/action, And support http or redis pub/sub to trigger async task from your web application.",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "extension",
+    "swoole",
+    "websocket",
+    "websocket server",
+    "redis",
+    "async",
+    "pub sub"
+  ],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "immusen",
+      "email": "immusen@gmail.com"
     }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "immusen\\websocket\\": ""
+    }
+  }
 }

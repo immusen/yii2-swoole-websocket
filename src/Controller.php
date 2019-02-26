@@ -42,7 +42,7 @@ class Controller
      * @param $fds
      * @param $content
      * @param int $rpc_id
-     * @param string $fds_key, if fds saved by customize key, assign this param. @see \immusen\websocket\src\Controller::addFds
+     * @param string $fds_key , if fds saved by customize key, assign this param. @see \immusen\websocket\src\Controller::addFds
      * @return bool
      */
     public function publish($fds, $content, $rpc_id = 1, $fds_key = '')
@@ -64,8 +64,8 @@ class Controller
     }
 
     /**
-     * get fd by group
-     * @param $key
+     * get fd by key
+     * @param $key , group key
      * @return array
      */
     public function getFds($key = '')
@@ -79,7 +79,7 @@ class Controller
     /**
      * add fd into group
      * @param $fd
-     * @param string $key
+     * @param string $key , group key
      * @return mixed
      */
     public function addFds($fd, $key = '')
@@ -88,6 +88,12 @@ class Controller
         return $this->redis->sadd(self::GROUP_PREFIX . $key, $fd);
     }
 
+    /**
+     * remove key from group
+     * @param $fd
+     * @param string $key , group key
+     * @return mixed
+     */
     public function delFds($fd, $key = '')
     {
         $key = ($key == '') ? $this->route : $key;

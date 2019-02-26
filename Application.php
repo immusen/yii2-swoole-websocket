@@ -11,7 +11,6 @@ namespace immusen\websocket;
 
 use Yii;
 use Swoole\Websocket\Server;
-use immusen\websocket\src\Mqtt;
 use immusen\websocket\src\Task;
 use immusen\websocket\src\Redis;
 use immusen\websocket\src\rpc\Request;
@@ -40,7 +39,6 @@ class Application extends \yii\base\Application
         $server->on('Task', [$this, 'onTask']);
         $server->on('Finish', [$this, 'onFinish']);
         $server->on('Connect', [$this, 'onConnect']);
-        $server->on('Receive', [$this, 'onReceive']);
         $server->on('Request', [$this, 'onRequest']);
         $server->on('Message', [$this, 'onMessage']);
         $server->on('Close', [$this, 'onClose']);
@@ -67,9 +65,9 @@ class Application extends \yii\base\Application
             if (!empty($config['auth']) && !$redis->auth($config['auth'])) return;
             while (true) {
                 //Redis pub/sub feature; Follow the task structure, Recommend use redis publish like this: redis->publish('async', 'send/sms/15600008888').
-                $result = $redis->subscribe(['async']);
+                $result = $redis->subscribe(['rpc']);
                 if ($result)
-                    $server->task(Task::async($result[2]));
+                    $this->handleRequest($result[2]);
             }
         });
     }
@@ -87,10 +85,10 @@ class Application extends \yii\base\Application
                 if ($result instanceof Response)
                     return $response->end($result->serialize());
                 else
-                    return $response->end('ok');
+                    return $response->end('{"jsonrpc":2.0,"id":1,"result":"ok"}');
             });
         else
-            return $resp->end($resp->status(404));
+            return $response->end($response->status(404));
     }
 
     public function onMessage($server, $frame)
@@ -104,12 +102,11 @@ class Application extends \yii\base\Application
 
     public function onClose($server, $fd, $from)
     {
-        $server->task(Task::internal('common/close/' . $fd));
+        $server->task(Task::internal('common/close', ['fd' => $fd]));
     }
 
     public function onTask(Server $server, $worker_id, $task_id, Task $task)
     {
-        var_dump($task);
         try {
             $class = Yii::$app->controllerNamespace . '\\' . ucfirst($task->class) . 'Controller';
             $method = new \ReflectionMethod($class, 'action' . ucfirst($task->method));
@@ -161,13 +158,13 @@ class Application extends \yii\base\Application
             $id = $request->getId();
             $method = $request->getMethod();
             $params = $request->getParams();
-            return $this->server->task(Task::rpc($fd, $method, $params, $id));
         } catch (Exception $e) {
             if (!isset($id)) $id = 1;
             $response = new Response($id);
             $response->setError($e->getError());
             return $response;
         }
+        return $this->server->task(Task::rpc($fd, $method, $params, $id));
     }
 
 }

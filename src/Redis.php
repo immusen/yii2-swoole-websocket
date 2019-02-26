@@ -11,7 +11,7 @@ namespace immusen\websocket\src;
 /**
  * Beta
  * Class Redis Connect Pool
- * @package immusen\mqtt\src
+ * @package immusen\websocket\src
  */
 class Redis
 {

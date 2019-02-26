@@ -1,0 +1,528 @@
+[2019-01-20 06:47:09 ^4341.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-20 06:47:09 $4338.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-20 06:47:11 ^4342.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-20 06:47:11 $4338.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-01-20 06:47:11 ^4345.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-20 06:47:11 $4338.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-20 07:03:53 ^4414.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-20 07:03:53 $4411.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-20 07:03:55 ^4433.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-20 07:03:55 $4411.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-20 07:03:55 ^4415.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-20 07:03:55 $4411.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-01-22 07:21:59 *4225.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-22 07:21:59 $4220.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-22 07:22:41 $4229.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-01-22 07:22:42 *4235.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-22 07:22:42 $4229.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2019-01-22 07:22:44 $4229.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-01-22 09:54:48 *4324.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-22 09:54:48 $4319.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-22 09:55:24 *4333.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-22 09:55:24 $4328.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-24 06:22:46 $4187.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-01-25 02:45:20 *4201.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 02:45:20 $4196.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-25 02:45:57 *4210.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 02:45:57 $4205.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-25 02:46:43 ^4217.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 02:46:43 $4214.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-25 02:47:34 ^4226.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 02:47:34 $4223.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-25 06:42:18 $4395.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-01-25 06:42:21 *4402.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 06:42:21 $4395.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-25 06:42:31 *4403.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 06:42:31 $4395.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-25 06:42:41 *4404.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 06:42:41 $4395.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-25 06:45:43 *4413.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 06:45:43 $4408.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-01-25 06:50:42 $4425.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-01-25 09:21:34 ^4519.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 09:21:34 $4515.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-01-25 09:21:55 $4515.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-01-25 09:28:14 ^4532.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 09:28:14 $4528.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-01-25 09:28:14 ^4531.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 09:28:14 $4528.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-25 09:36:04 ^4543.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 09:36:04 $4540.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-25 11:07:41 ^4624.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 11:07:41 $4620.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-01-25 11:31:41 ^4627.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 11:31:41 $4620.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-01-25 11:40:21 ^4661.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-25 11:40:22 $4658.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-01-27 14:34:06 ^4342.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-01-27 14:34:06 $4338.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-04 14:52:43 ^4184.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 14:52:43 $4181.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-04 15:11:17 *4243.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:11:17 $4238.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:11:51 *4252.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:11:51 $4247.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:12:00 ^4250.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:12:00 $4247.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-04 15:12:01 *4254.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:12:01 $4247.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:12:37 *4263.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:12:37 $4258.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:12:54 *4265.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:12:54 $4258.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:12:54 ^4261.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:12:54 $4258.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-04 15:12:54 ^4262.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:12:54 $4258.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-04 15:13:07 *4275.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:13:07 $4270.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:13:53 *4284.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:13:53 $4279.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:14:19 ^4282.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:14:19 $4279.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-04 15:14:19 *4286.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:14:19 $4279.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:14:19 ^4283.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:14:19 $4279.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-04 15:14:50 *4285.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:14:50 $4279.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2019-02-04 15:14:50 ^4289.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:14:50 $4279.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-04 15:14:50 ^4287.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:14:50 $4279.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-04 15:18:47 ^4291.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:18:47 $4279.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-04 15:18:47 ^4292.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:18:47 $4279.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-04 15:49:57 *4365.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:49:57 $4360.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:50:06 ^4363.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:50:06 $4360.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-04 15:50:06 *4366.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:50:06 $4360.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2019-02-04 15:50:18 *4367.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:50:18 $4360.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:50:18 ^4368.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:50:18 $4360.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-04 15:50:18 ^4364.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:50:18 $4360.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-04 15:50:59 *4370.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:50:59 $4360.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-04 15:51:49 *4381.0]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-04 15:51:49 $4376.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-02-25 07:31:54 ^4189.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 07:31:54 $4185.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-25 07:41:55 ^4200.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 07:41:55 $4196.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-25 08:18:31 ^4240.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 08:18:31 $4237.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-25 08:22:11 ^4241.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 08:22:11 $4237.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-25 09:34:13 ^4328.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 09:34:13 $4324.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-25 09:44:30 ^4337.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 09:44:30 $4334.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-25 09:54:12 ^4349.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 09:54:12 $4345.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-25 10:22:20 ^4375.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 10:22:20 ^4376.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 10:22:20 $4372.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-25 10:22:20 $4372.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-25 10:32:52 ^4389.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 10:32:52 ^4388.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-25 10:32:53 $4385.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-25 10:32:53 $4385.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:22:03 $4316.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-02-26 02:22:14 $4316.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-02-26 02:22:14 ^4319.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:22:14 ^4320.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:22:14 $4316.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:22:14 $4316.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:00 ^4327.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:00 ^4326.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:00 $4316.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:00 $4316.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:00 $4316.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-02-26 02:24:09 *4322.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:09 $4316.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:09 ^4330.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:09 $4316.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:14 $4316.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-02-26 02:24:14 ^4333.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:14 $4316.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:15 *4332.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:15 $4316.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:15 ^4335.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:15 $4316.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:15 $4316.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-02-26 02:24:15 ^4337.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:15 $4316.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:26 ^4329.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:26 $4316.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:28 *4336.1]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:29 $4316.0]	WARNING	swManager_check_exit_status: worker#1 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:29 ^4340.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:29 $4316.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:35 $4316.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=0, signal=11
+[2019-02-26 02:24:35 ^4342.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:35 $4316.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-26 02:24:57 ^4339.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:24:57 $4316.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:25:47 ^4350.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:25:47 $4347.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:29:13 ^4351.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:29:13 $4347.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-26 02:29:13 ^4355.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:29:13 $4347.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:33:22 ^4363.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:33:22 $4360.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2019-02-26 02:33:22 ^4364.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:33:22 $4360.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-26 02:48:04 ^4384.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:48:04 ^4385.3]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Uncaught Swoole\ExitException: swoole exit. in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php:269
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+  thrown in /data/webroot/immusen/vendor/yiisoft/yii2/base/ErrorHandler.php on line 269.
+[2019-02-26 02:48:04 $4381.0]	WARNING	swManager_check_exit_status: worker#3 abnormal exit, status=255, signal=0
+[2019-02-26 02:48:04 $4381.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
