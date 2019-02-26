@@ -46,22 +46,27 @@ to vendor/yiisoft/extensions.php
 Test or Usage
 -------------
 
+
+> after installation, cd project root path, e.g. cd yii2-advanced-project/
 ```
-// after installation, cd project root path, e.g. cd yii2-advanced-project/
 mv vendor/immusen/yii2-swoole-websocket/example/websocket ./
 mv vendor/immusen/yii2-swoole-websocket/example/websocket-server ./
 chmod a+x ./websocket-server
-// run:
+```
+> run:
+```
 ./websocket-server
-// config :
+```
+> config :
+```
 vim ./websocket/config/params.php
 <?php
 return [
     'listen' => 8721,
     'daemonize' => 0,
 ];
-// or coding in ./websocket/controllers/
 ```
+> or coding in ./websocket/controllers/
 
 Example:
 --------
@@ -128,8 +133,15 @@ websocket client send:
 
 All of client to server rpc command also can send by HTTP or Redis publish, This feature will helpful for some async task triggered from web application. Example in chat room case: 
 
-HTTP request: http://127.0.0.1:8721/rpc?p={"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}
-
-OR redis publish: 127.0.0.1:6379> publish rpc '{"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}'
-
-OR Yii:$app->redis->publish('rpc', '{"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}')
+HTTP request: 
+```
+http://127.0.0.1:8721/rpc?p={"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}
+```
+OR redis-cli: 
+```
+127.0.0.1:6379> publish rpc '{"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}'
+```
+OR in Yii web application
+```
+Yii:$app->redis->publish('rpc', '{"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}')
+```
