@@ -70,7 +70,7 @@ return [
 
 Example:
 --------
-Case A: Chat room, demo code: ./websocket/controllers/RoomController.php
+Chat room demo, code: ./websocket/controllers/RoomController.php
 
 > client join room: 
 websocket client send: 
@@ -130,6 +130,61 @@ websocket client send:
         }
     }
 ```
+
+Coding:
+--------
+1, Create Controller under websocket/controllers, or other path which defined with "controllerNamespace" in websocket/config/main.php
+```
+<?php
+namespace websocket\controllers;
+
+use immusen\websocket\src\Controller;
+
+class FooController extends Controller
+{
+     public function actionBar($param_1, $param_2 = 0, param_n = null)
+     {
+          # add current fd into a group/set, make $param_1 or anyother string as the group/set key
+          $this->addFds($this->fd, $param_1);
+          
+          # reply message to current client by websocket
+          $this->publish($this->fd, ['p1' => param_1, 'p2' => param_2]);
+          
+          # get all fds stored in the group/set
+          $fds_array = $this->getFds($param_1);
+          
+          # reply message to a group
+          $this->publish($fds_array, ['p1' => param_1, 'p2' => param_2]);
+          
+          # operate redis via redis pool
+          $this->redis->set($param_1, 0)
+     }
+     
+     public function actionBaz()
+     {
+          //...
+     }
+}
+```
+
+2, Send RPC JSON to trigger that action 
+```
+    {
+        "jsonrpc":"2.0",
+        "id":1,
+        "method":"foo/bar",
+        "params":{
+            "param_1":"client_01",
+            "param_2":100,
+            "param_n":{
+                "time":1551408888,
+                "type":"report"
+            }
+        }
+    }
+```
+
+---
 
 All of client to server rpc command also can send by HTTP or Redis publish, This feature will helpful for some async task triggered from web application. Example in chat room case: 
 
