@@ -21,8 +21,7 @@ class UserController extends Controller
             'avatar' => '1.png'
         ];
         $this->server->bind($this->fd, $user['id']);
-        $this->publish($this->fd, ['user' => $user]);
-        return $user;
+        return $this->publish($this->fd, ['user' => $user]);
     }
 
 }

@@ -39,26 +39,20 @@ class Controller
 
     /**
      * Broadcast publish
-     * @param $fds
+     * @param $fds mixed string|array
      * @param $content
-     * @param int $rpc_id
-     * @param string $fds_key , if fds saved by customize key, assign this param. @see \immusen\websocket\src\Controller::addFds
      * @return bool
      */
-    public function publish($fds, $content, $rpc_id = 1, $fds_key = '')
+    public function publish($fds, $content)
     {
         if (!is_array($fds)) $fds = array($fds);
-        $msg = $this->buildResponse($content, $rpc_id);
+        $msg = $this->buildResponse($content);
         var_dump($msg);
         $result = 1;
         while ($fds) {
             $fd = (int)array_pop($fds);
-            if ($this->server->isEstablished($fd)) {
+            if ($this->server->isEstablished($fd))
                 $result &= $this->server->push($fd, $msg) ? 1 : 0;
-            } else {
-                $fds_key = ($fds_key == '') ? $this->route : $fds_key;
-                $this->redis->srem(self::GROUP_PREFIX . $fds_key, $fd);
-            }
         }
         return !!$result;
     }
@@ -106,9 +100,9 @@ class Controller
      * @param $rpc_id
      * @return string
      */
-    private function buildResponse($content, $rpc_id)
+    private function buildResponse($content)
     {
-        $response = new Response($rpc_id);
+        $response = new Response($this->rpc_id);
         $response->setResult($content);
         return $response->serialize();
     }

@@ -21,7 +21,7 @@ class RoomController extends Controller
     const ROOM_MEMBER_COUNT_KEY = 'ws_record_hash_#room';
 
     /**
-     * Client who join a room, send a PUBLISH to server, with a topic e.g. room/join/100001, and submit user info into $payload about somebody who joined
+     * Client who join a room
      * @param $id , room id
      * @param null $info , some extra data
      * @return bool
@@ -63,7 +63,20 @@ class RoomController extends Controller
     }
 
     /**
-     * Message to room, with a topic e.g. room/msg/100001, and submit a pure or json string as payload. e.g. 'hello' or '{"type":"msg","from":"foo","content":"hello!"}'
+     * Message to room, e.g. room/msg
+     * ```JSON
+     * {
+     *       "jsonrpc":"2.0",
+     *       "id":1,
+     *       "method":"room/msg",
+     *       "params":{
+     *           "id":"100111",
+     *           "content":{
+     *               "text":"Hello world!"
+     *           }
+     *       }
+     *   }
+     * ```
      * @param $id
      * @param $content
      * @return bool

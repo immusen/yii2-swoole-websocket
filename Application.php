@@ -140,8 +140,6 @@ class Application extends \yii\base\Application
                 $args[] = $params[$name];
                 unset($params[$name]);
             } elseif ($param->isDefaultValueAvailable()) {
-                if ($param->getDefaultValue() === null && is_array($params[$name]))
-                    $args[] = $params[$name];
                 $args[] = $param->getDefaultValue();
             } else {
                 $missing[] = $name;
