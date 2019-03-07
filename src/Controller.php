@@ -8,16 +8,16 @@
 
 namespace immusen\websocket\src;
 
-use immusen\websocket\src\rpc\Response;
 use Swoole\Server;
+use immusen\websocket\src\Task;
+use immusen\websocket\src\rpc\Response;
 
 class Controller
 {
     public $server;
     public $fd;
     public $redis;
-    public $route;
-    public $rpc_id;
+    public $task;
     //key prefix of redis set
     const GROUP_PREFIX = 'ws_group_fds_set_#';
 
@@ -28,33 +28,52 @@ class Controller
      * @param $topic
      * @param string $verb
      */
-    public function __construct(Server $server, $fd, $route, $rpc_id = 1)
+    public function __construct(Server $server, Task $task)
     {
-        $this->fd = $fd;
         $this->redis = $server->redis;
+        $this->fd = $task->fd;
+        $this->task = $task;
         $this->server = $server;
-        $this->route = $route;
-        $this->rpc_id = $rpc_id;
+        $this->beforeAction();
+    }
+
+    public function beforeAction()
+    {
+
     }
 
     /**
      * Broadcast publish
      * @param $fds mixed string|array
-     * @param $content
+     * @param $content message
+     * @key group key, use to remove fd from group when client not establish
      * @return bool
      */
-    public function publish($fds, $content)
+    public function publish($fds, $content, $key = '')
     {
         if (!is_array($fds)) $fds = array($fds);
         $msg = $this->buildResponse($content);
-        var_dump($msg);
         $result = 1;
         while ($fds) {
             $fd = (int)array_pop($fds);
             if ($this->server->isEstablished($fd))
                 $result &= $this->server->push($fd, $msg) ? 1 : 0;
+            else
+                if ($key != '') $this->leaveGroup($fd, $key);
         }
         return !!$result;
+    }
+
+    /**
+     * send message to group
+     * @param $content , message
+     * @param string $key , group key/name
+     */
+    public function sendToGroup($content, $key = '')
+    {
+        $key = ($key == '') ? $this->route : $key;
+        $fds = $this->redis->smembers(self::GROUP_PREFIX . $key);
+        return $this->publish($fds, $content, $key);
     }
 
     /**
@@ -62,7 +81,7 @@ class Controller
      * @param $key , group key
      * @return array
      */
-    public function getFds($key = '')
+    public function groupMembers($key = '')
     {
         $key = ($key == '') ? $this->route : $key;
         $res = $this->redis->smembers(self::GROUP_PREFIX . $key);
@@ -76,7 +95,7 @@ class Controller
      * @param string $key , group key
      * @return mixed
      */
-    public function addFds($fd, $key = '')
+    public function joinGroup($fd, $key = '')
     {
         $key = ($key == '') ? $this->route : $key;
         return $this->redis->sadd(self::GROUP_PREFIX . $key, $fd);
@@ -88,7 +107,7 @@ class Controller
      * @param string $key , group key
      * @return mixed
      */
-    public function delFds($fd, $key = '')
+    public function leaveGroup($fd, $key = '')
     {
         $key = ($key == '') ? $this->route : $key;
         return $this->redis->srem(self::GROUP_PREFIX . $key, $fd);
@@ -102,7 +121,7 @@ class Controller
      */
     private function buildResponse($content)
     {
-        $response = new Response($this->rpc_id);
+        $response = new Response($this->task->rpc_id);
         $response->setResult($content);
         return $response->serialize();
     }

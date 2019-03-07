@@ -64,10 +64,9 @@ class Application extends \yii\base\Application
             if (!$result) return;
             if (!empty($config['auth']) && !$redis->auth($config['auth'])) return;
             while (true) {
-                //Redis pub/sub feature; Follow the task structure, Recommend use redis publish like this: redis->publish('async', 'send/sms/15600008888').
                 $result = $redis->subscribe(['rpc']);
-                if ($result)
-                    $this->handleRequest($result[2]);
+                if (empty($result)) continue;
+                $this->handleRequest($result[2], -2);
             }
         });
     }
@@ -81,7 +80,7 @@ class Application extends \yii\base\Application
     {
         if ($request->server['path_info'] == '/rpc')
             go(function () use ($request, $response) {
-                $result = $this->handleRequest($request->get['p'], 0);
+                $result = $this->handleRequest($request->get['p'], -1);
                 if ($result instanceof Response)
                     return $response->end($result->serialize());
                 else
@@ -110,8 +109,8 @@ class Application extends \yii\base\Application
         try {
             $class = Yii::$app->controllerNamespace . '\\' . ucfirst($task->class) . 'Controller';
             $method = new \ReflectionMethod($class, 'action' . ucfirst($task->method));
-            $args = $this->getArgs($method, $task->param);
-            $method->invokeArgs(new $class($server, $task->fd, $task->route, $task->rpc_id), $args);
+            $args = $this->getArgs($method, $task);
+            return $method->invokeArgs(new $class($server, $task), $args);
         } catch (\Exception $e) {
             var_dump($e->getMessage());
             var_dump($e->getTraceAsString());
@@ -126,11 +125,13 @@ class Application extends \yii\base\Application
 
     public function onFinish(Server $server, $task_id, $data)
     {
-        echo 'Task finished #' . $task_id . '  #' . $data . PHP_EOL;
+        echo 'Task finished #' . $task_id . PHP_EOL;
+        var_dump($data);
     }
 
-    private function getArgs($method, $params)
+    private function getArgs($method, Task $task)
     {
+        $params = $task->param;
         $args = [];
         $missing = [];
         if (!is_array($params)) $params = array($params);
@@ -146,6 +147,8 @@ class Application extends \yii\base\Application
             }
         }
         if (!empty($missing)) throw new \Exception('Missing required parameters: ' . implode(',', $missing));
+        if (isset($params['__once'])
+            && $this->server->redis->del('rpc_con_lock_#' . $task->rpc_id) !== 1) throw new \Exception('Method already running in other instances');
         return $args;
     }
 

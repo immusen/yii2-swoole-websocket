@@ -1,6 +1,6 @@
 Websocket rpc server For Yii2 Base On Swoole 4
 ==============================
-Websocket server for Yii2 base on swoole 4, Support JSONRPC, Resolve 'method' as a route reflect into controller/action, And support http or redis pub/sub to trigger async task from your web application.
+Websocket server for Yii2 base on swoole 4, Support JSON-RPC, Resolve 'method' as a route reflect into controller/action, And support http or redis pub/sub to trigger async task from your web application.
 
 Installation
 ------------
@@ -25,22 +25,6 @@ or add
 ```
 
 to the require section of your `composer.json` file.
-
-or unzip code into vendor directory and then add 
-
-```  
-'immusen/yii2-swoole-websocket' => 
-     array (
-       'name' => 'immusen/yii2-swoole-websocket',
-       'version' => 'dev',
-       'alias' => 
-       array (
-         '@immusen/websocket' => $vendorDir . '/immusen/yii2-swoole-websocket',
-       ),
-     ),
-
-```
-to vendor/yiisoft/extensions.php
 
 
 Test or Usage
@@ -70,7 +54,7 @@ return [
 
 Example:
 --------
-Chat room demo, code: ./websocket/controllers/RoomController.php
+Chat room demo, code: [./example/websocket/controllers/RoomController.php](https://github.com/immusen/yii2-swoole-websocket/blob/master/example/websocket/controllers/RoomController.php)
 
 > client join room: 
 websocket client send: 
@@ -142,32 +126,31 @@ use immusen\websocket\src\Controller;
 
 class FooController extends Controller
 {
-     public function actionBar($param_1, $param_2 = 0, param_n = null)
+     public function actionBar($param_1, $param_2 = 0, $param_n = null)
      {
           # add current fd into a group/set, make $param_1 or anyother string as the group/set key
-          $this->addFds($this->fd, $param_1);
+          $this->joinGroup($this->fd, $param_1);
           
           # reply message to current client by websocket
-          $this->publish($this->fd, ['p1' => param_1, 'p2' => param_2]);
+          $this->publish($this->fd, ['p1' => $param_1, 'p2' => $param_2]);
           
           # get all fds stored in the group/set
-          $fds_array = $this->getFds($param_1);
+          $fds_array = $this->groupMembers($param_1);
           
           # reply message to a group
-          $this->publish($fds_array, ['p1' => param_1, 'p2' => param_2]);
+          $this->publish($fds_array, ['p1' => $param_1, 'p2' => $param_2]);
+          #or
+          $this->sendToGroup(['p1' => $param_1, 'p2' => $param_2], $param_1);
           
           # operate redis via redis pool
           $this->redis->set($param_1, 0)
      }
-     
-     public function actionBaz()
-     {
-          //...
-     }
+    
+     //...
 }
 ```
 
-2, Send RPC JSON to trigger that action 
+2, Send JSON-RPC to trigger that action 
 ```
     {
         "jsonrpc":"2.0",
@@ -199,4 +182,8 @@ OR redis-cli:
 OR in Yii web application
 ```
 Yii:$app->redis->publish('rpc', '{"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}')
+```
+OR use Hook (recommend), Support 'runOnce' to keep method run only once even if multiple swoole instances online, @see [immusen/yii2-swoole-websocket/Hook.php](https://github.com/immusen/yii2-swoole-websocket/blob/master/Hook.php)
+```
+Yii::$app->hook->run('room/msg', ['id' => 100111, 'content' => ['text' => 'System warning!']]);
 ```

@@ -20,6 +20,12 @@ class RoomController extends Controller
 
     const ROOM_MEMBER_COUNT_KEY = 'ws_record_hash_#room';
 
+
+    public function beforeAction()
+    {
+        parent::beforeAction();
+    }
+
     /**
      * Client who join a room
      * @param $id , room id
@@ -35,14 +41,14 @@ class RoomController extends Controller
         //    return $this->publish($this->fd, ['type' => 'error', 'msg' => 'Permission denied']);
 
         //add fd into group with room id as the key
-        $this->addFds($this->fd, $id);
+        $this->joinGroup($this->fd, $id);
 
         $member_count = $this->redis->hincrby(self::ROOM_MEMBER_COUNT_KEY, $id, 1);
 
         //Get all fds in this room/group;
-        $targets = $this->getFds($id);
+        $targets = $this->groupMembers($id);
         //Broadcast to every client
-        return $this->publish($targets, ['type' => 'join', 'count' => $member_count, 'info' => $info]);
+        return $this->sendToGroup(['type' => 'join', 'count' => $member_count, 'info' => $info], $id);
 
         //Or send history message to this client (fake code)
         //$this->publish($this->fd, $this->getHistoryMessageFunction());
@@ -57,9 +63,9 @@ class RoomController extends Controller
     public function actionLeave($id, $info = null)
     {
         $member_count = $this->redis->hincrby(self::ROOM_MEMBER_COUNT_KEY, $id, -1);
-        $this->publish($this->getFds($id), ['type' => 'leave', 'count' => $member_count, 'info' => $info]);
+        $this->sendToGroup(['type' => 'leave', 'count' => $member_count, 'info' => $info], $id);
         //del fd from group
-        return $this->delFds($this->fd, $id);
+        return $this->leaveGroup($this->fd, $id);
     }
 
     /**
@@ -83,7 +89,8 @@ class RoomController extends Controller
      */
     public function actionMsg($id, $content = null)
     {
-        return $this->publish($this->getFds($id), $content);
+        return $this->sendToGroup($content, $id);
+        //same as $this->publish($this->groupMembers($id), $content);
     }
 
 }

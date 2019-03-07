@@ -12,6 +12,21 @@ use immusen\websocket\src\Controller;
 
 class UserController extends Controller
 {
+    /**
+     * Auth and bind user id on connection
+     * @param $token
+     * @return bool
+     * ```json
+     *{
+     *      "jsonrpc":"2.0",
+     *      "id":1,
+     *      "method":"user/auth",
+     *      "params":{
+     *           "token":"xxxx"
+     *      }
+     * }
+     * ```
+     */
     public function actionAuth($token)
     {
         //$user = User::getUserByToken($token)
