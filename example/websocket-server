@@ -3,6 +3,7 @@
 
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
+
 defined('STDIN') or define('STDIN', fopen('php://stdin', 'r'));
 defined('STDOUT') or define('STDOUT', fopen('php://stdout', 'w'));
 defined('STDERR') or define('STDERR', fopen('php://stderr', 'w'));
@@ -18,6 +19,26 @@ $config = yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/websocket/config/main-local.php'
 );
 
-$application = new immusen\websocket\Application($config);
-$exitCode = $application->run();
-exit($exitCode);
+$op = isset($_SERVER['argv'][1]) ? $_SERVER['argv'][1] : 'start';
+$pid = @file_get_contents($config['params']['swoole']['server']['pid_file']);
+if (!$pid && $op != 'start') exit("Server inactive\n");
+
+switch ($op) {
+    case 'start':
+        start:
+        $application = new immusen\websocket\Application($config);
+        exit($application->run());
+    case 'restart':
+        @exec("kill -TERM {$pid}");
+        goto start;
+    case 'reload':
+        @exec("kill -USR2 {$pid}");
+        break;
+    case 'stop':
+        @exec("kill -TERM {$pid}");
+        break;
+    case 'status':
+        exit("master_pid={$pid}\n" . @file_get_contents('http://localhost:8721/status') . "\n");
+    default:
+        exit('Usage: ' . $_SERVER['argv'][0] . ' {start|restart|reload|stop|status}' . PHP_EOL);
+}

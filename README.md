@@ -39,16 +39,14 @@ chmod a+x ./websocket-server
 ```
 > run:
 ```
-./websocket-server
+./websocket-server start    //start server
+./websocket-server restart  //restart server
+./websocket-server reload  //reload task worker
+./websocket-server status  //server status
 ```
 > config :
 ```
 vim ./websocket/config/params.php
-<?php
-return [
-    'listen' => 8721,
-    'daemonize' => 0,
-];
 ```
 > or coding in ./websocket/controllers/
 
@@ -186,4 +184,5 @@ Yii:$app->redis->publish('rpc', '{"jsonrpc":"2.0","id":1,"method":"room/msg","pa
 OR use Hook (recommend), Support 'runOnce' to keep method run only once even if multiple swoole instances online, @see [immusen/yii2-swoole-websocket/Hook.php](https://github.com/immusen/yii2-swoole-websocket/blob/master/Hook.php)
 ```
 Yii::$app->hook->run('room/msg', ['id' => 100111, 'content' => ['text' => 'System warning!']]);
+Yii::$app->hook->runOnce('sms/send', ['mobile' => 15600008721, 'code' => '8721']);
 ```

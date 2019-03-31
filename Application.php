@@ -21,37 +21,30 @@ class Application extends \yii\base\Application
 {
 
     public $server;
+    private $config;
+    private $events;
+
+    public function init()
+    {
+        parent::init();
+        $this->config = Yii::$app->params['swoole'];
+        $this->events = ['Start', 'WorkerStart', 'Request', 'Message', 'Close', 'Task', 'Finish'];
+    }
 
     public function run()
     {
-        $port = Yii::$app->params['listen'];
-        $server = new Server('0.0.0.0', $port, SWOOLE_PROCESS);
-        $server->set([
-            'worker_num' => 2,
-            'task_worker_num' => 2,
-            'debug_mode' => 1,
-            'heartbeat_check_interval' => 60,
-            'heartbeat_idle_time' => 180,
-            'daemonize' => Yii::$app->params['daemonize'],
-            'log_file' => Yii::$app->getRuntimePath() . '/logs/app.log'
-        ]);
-        $server->on('Start', [$this, 'onStart']);
-        $server->on('Task', [$this, 'onTask']);
-        $server->on('Finish', [$this, 'onFinish']);
-        $server->on('Connect', [$this, 'onConnect']);
-        $server->on('Request', [$this, 'onRequest']);
-        $server->on('Message', [$this, 'onMessage']);
-        $server->on('Close', [$this, 'onClose']);
-        $server->on('WorkerStart', [$this, 'onWorkerStart']);
-        //Mount redis on $server
-        $server->redis = Redis::getRedis();
-        $this->server = $server;
+        $this->server = new Server($this->config['address'], $this->config['port'], SWOOLE_PROCESS);
+        $this->server->set($this->config['server']);
+        array_map(function ($event) {
+            call_user_func_array([$this->server, 'on'], [$event, [$this, 'on' . $event]]);
+        }, $this->events);
+        $this->server->redis = Redis::getRedis();
         $this->server->start();
     }
 
     public function onStart($server)
     {
-        echo "Server Start {$server->master_pid}" . PHP_EOL;
+        echo "Server Start: {$server->master_pid}" . PHP_EOL;
     }
 
     public function onWorkerStart(Server $server, $id)
@@ -71,11 +64,6 @@ class Application extends \yii\base\Application
         });
     }
 
-    public function onConnect($server, $fd, $from_id)
-    {
-        echo '# client connected ' . $fd . ' -=- ' . $from_id . PHP_EOL;
-    }
-
     public function onRequest($request, $response)
     {
         if ($request->server['path_info'] == '/rpc')
@@ -86,6 +74,8 @@ class Application extends \yii\base\Application
                 else
                     return $response->end('{"jsonrpc":2.0,"id":1,"result":"ok"}');
             });
+        elseif ($request->server['remote_addr'] == '127.0.0.1' && $request->server['path_info'] == '/status')
+            return $response->end(http_build_query($this->server->stats(), '', "\n"));
         else
             return $response->end($response->status(404));
     }
