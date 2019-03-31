@@ -7,7 +7,7 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'mqtt',
+    'id' => 'websocket',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'websocket\controllers',

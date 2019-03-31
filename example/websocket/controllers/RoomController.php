@@ -13,7 +13,7 @@ use immusen\websocket\src\Controller;
 /**
  * Chat room demo
  * Class RoomController
- * @package mqtt\controllers
+ * @package websocket\controllers
  */
 class RoomController extends Controller
 {
