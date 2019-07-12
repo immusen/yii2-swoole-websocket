@@ -57,9 +57,9 @@ class Hook extends Component
     {
         parent::init();
         if (!empty($this->gateway)) {
-            $continer = new Container();
-            $continer->set($this->gateway['class'], $this->gateway);
-            $this->redis = $continer->get($this->gateway['class']);
+            $container = new Container();
+            $container->set($this->gateway['class'], $this->gateway);
+            $this->redis = $container->get($this->gateway['class']);
         } else {
             $this->redis = Yii::$app->redis;
         }
