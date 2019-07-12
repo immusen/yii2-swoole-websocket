@@ -7,17 +7,29 @@ defined('YII_ENV') or define('YII_ENV', 'dev');
 defined('STDIN') or define('STDIN', fopen('php://stdin', 'r'));
 defined('STDOUT') or define('STDOUT', fopen('php://stdout', 'w'));
 defined('STDERR') or define('STDERR', fopen('php://stderr', 'w'));
+defined('YII_TYPE') or define('YII_TYPE', file_exists(__DIR__ . '/common/config/'));
 
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
-require __DIR__ . '/common/config/bootstrap.php';
-require __DIR__ . '/websocket/config/bootstrap.php';
-$config = yii\helpers\ArrayHelper::merge(
-    require __DIR__ . '/common/config/main.php',
-    require __DIR__ . '/common/config/main-local.php',
-    require __DIR__ . '/websocket/config/main.php',
-    require __DIR__ . '/websocket/config/main-local.php'
-);
+if (YII_TYPE) {
+    require __DIR__ . '/vendor/autoload.php';
+    require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
+    require __DIR__ . '/common/config/bootstrap.php';
+    require __DIR__ . '/websocket/config/bootstrap.php';
+    $config = yii\helpers\ArrayHelper::merge(
+        require __DIR__ . '/common/config/main.php',
+        require __DIR__ . '/common/config/main-local.php',
+        require __DIR__ . '/websocket/config/main.php',
+        require __DIR__ . '/websocket/config/main-local.php'
+    );
+} else {
+    require __DIR__ . '/vendor/autoload.php';
+    require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
+    require __DIR__ . '/websocket/config/bootstrap.php';
+    $config = yii\helpers\ArrayHelper::merge(
+        require __DIR__ . '/config/console.php',
+        require __DIR__ . '/websocket/config/main.php',
+        require __DIR__ . '/websocket/config/main-local.php'
+    );
+}
 
 $op = isset($_SERVER['argv'][1]) ? $_SERVER['argv'][1] : 'start';
 $pid = @file_get_contents($config['params']['swoole']['server']['pid_file']);
