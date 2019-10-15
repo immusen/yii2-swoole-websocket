@@ -73,7 +73,7 @@ class Hook extends Component
     public function run($method, $param, $id = 1)
     {
         if (!is_array($param)) throw new \Exception('Expected array for $param');
-        return !!Yii::$app->redis->publish('rpc', $this->buildRpc($method, $param));
+        return !!Yii::$app->redis->rPush('rpc', $this->buildRpc($method, $param));
     }
 
     /**
@@ -87,7 +87,7 @@ class Hook extends Component
         if ($id === 0) $id = (int)microtime(1) * 1000;
         Yii::$app->redis->setex('rpc_con_lock_#' . $id, 600, 1);
         $param['__once'] = 1;
-        return !!Yii::$app->redis->publish('rpc', $this->buildRpc($method, $param, $id));
+        return !!Yii::$app->redis->rPush('rpc', $this->buildRpc($method, $param, $id));
     }
 
     /**
