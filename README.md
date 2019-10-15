@@ -179,7 +179,7 @@ OR redis-cli:
 ```
 OR in Yii web application
 ```
-Yii:$app->redis->publish('rpc', '{"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}')
+Yii:$app->redis->rPush('rpc', '{"jsonrpc":"2.0","id":1,"method":"room/msg","params":{"id":"100111","content":{"text":"System warning!"}}}')
 ```
 OR use Hook (recommend), Support 'runOnce' to keep method run only once even if multiple swoole instances online, @see [immusen/yii2-swoole-websocket/Hook.php](https://github.com/immusen/yii2-swoole-websocket/blob/master/Hook.php)
 ```
