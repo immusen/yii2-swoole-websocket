@@ -56,10 +56,13 @@ class Application extends \yii\base\Application
             $result = $redis->connect($config['host'], $config['port']);
             if (!$result) return;
             if (!empty($config['auth']) && !$redis->auth($config['auth'])) return;
-            while (true) {
-                $result = $redis->subscribe(['rpc']);
-                if (empty($result)) continue;
-                $this->handleRequest($result[2], -2);
+                while (true) {
+                $result = $redis->lPop('rpc');
+                if (empty($result)){
+                    usleep(200000);
+                    continue;
+                }
+                $this->handleRequest($result, -2);
             }
         });
     }
